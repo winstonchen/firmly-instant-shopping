@@ -64,7 +64,7 @@ cd web-demo && ./run-local.sh   # serves on :8090 and opens the browser
 - **Is**: a clean-room reference client for Firmly's public API surface — every endpoint used is documented at [developers.firmly.ai](https://developers.firmly.ai/) ([OpenAPI](https://developers.firmly.ai/openapi.json)).
 - **Isn't**: an SDK or any part of Firmly's product code. Nothing here is proprietary to Firmly's platform internals; card encryption is standard RFC 7516 done with the browser's WebCrypto.
 
-See [docs/DESIGN.md](docs/DESIGN.md) for architecture, sequence diagrams, the security model, and the exact integration contract (LLM keywords, browser profile, card source).
+See [docs/DESIGN.md](docs/DESIGN.md) for architecture, sequence diagrams, the security model, and the exact integration contract (LLM keywords, browser profile, card source) — and [docs/FAQ.md](docs/FAQ.md) for the practical engineer's guide: where is what, where to plug in your LLM key, profile/card prefill, App ID configuration, and how to embed this natively in a browser.
 
 ---
 
