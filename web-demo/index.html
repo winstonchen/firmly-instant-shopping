@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samsung Instant Shopping — Web Demo</title>
+  <link rel="icon" href="icon-48.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* web-demo frame: render the panel at side-panel width, centered */
+    body { display: flex; justify-content: center; background: #e8eaf0; }
+    .panel-frame {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      background: var(--bg);
+      box-shadow: 0 0 24px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+    }
+    .webdemo-note {
+      margin: 10px 12px 0;
+      padding: 7px 10px;
+      font-size: 11px;
+      border-radius: 8px;
+      background: #e8f6ee;
+      border: 1px solid #bfe6cf;
+      color: #0a5c28;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel-frame">
+    <header class="topbar">
+      <div class="brand">
+        <span class="samsung-wordmark">SAMSUNG</span>
+        <span class="brand-sub">Instant Shopping</span>
+      </div>
+      <span class="firmly-chip"><img src="icon-48.png" alt="" />powered by Firmly</span>
+      <button id="profileBtn" class="icon-btn" title="Profile &amp; saved card">⚙</button>
+    </header>
+
+    <div class="webdemo-note">
+      Web preview of the Samsung Browser extension — same code, live Firmly UAT APIs, places real test orders.
+      In the extension, keywords also come from the page you're viewing.
+    </div>
+
+    <main id="chat" class="chat"></main>
+
+    <div id="demoBadge" class="demo-badge hidden">
+      Showing demo catalog (UAT) — samsung.com / bestbuy.com pending provisioning on this App ID
+    </div>
+
+    <section class="searchbox composer">
+      <input id="searchInput" type="text" placeholder="Ask me anything about products…" autocomplete="off" />
+      <button id="searchBtn" class="btn btn-primary">Ask</button>
+    </section>
+  </div>
+
+  <div id="sheetOverlay" class="sheet-overlay hidden">
+    <div id="sheet" class="sheet" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div id="profileOverlay" class="sheet-overlay hidden">
+    <div class="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-head">
+        <h2>Profile</h2>
+        <button class="icon-btn" id="profileClose">✕</button>
+      </div>
+      <p class="fine">Stands in for the Samsung Browser profile &amp; card-on-file. Card CVV is never stored — it is captured at purchase time on the checkout screen.</p>
+      <form id="profileForm" class="form-grid">
+        <input name="first_name" placeholder="First name" />
+        <input name="last_name" placeholder="Last name" />
+        <input name="email" placeholder="Email" type="email" class="span2" />
+        <input name="phone" placeholder="Phone" class="span2" />
+        <input name="address1" placeholder="Address" class="span2" />
+        <input name="city" placeholder="City" />
+        <input name="state_or_province" placeholder="State (e.g. CA)" />
+        <input name="postal_code" placeholder="ZIP" />
+        <input name="country" placeholder="Country" value="US" />
+        <div class="span2 subhead">Saved card (no CVV)</div>
+        <input name="card_number" placeholder="Card number" inputmode="numeric" class="span2" />
+        <input name="card_name" placeholder="Name on card" class="span2" />
+        <input name="card_month" placeholder="MM" inputmode="numeric" maxlength="2" />
+        <input name="card_year" placeholder="YYYY" inputmode="numeric" maxlength="4" />
+        <button type="submit" class="btn btn-primary span2">Save profile</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

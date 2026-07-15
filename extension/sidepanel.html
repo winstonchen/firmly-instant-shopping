@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samsung Instant Shopping</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="samsung-wordmark">SAMSUNG</span>
+      <span class="brand-sub">Instant Shopping</span>
+    </div>
+    <span class="firmly-chip"><img src="icons/icon-16.png" alt="" />powered by Firmly</span>
+    <button id="profileBtn" class="icon-btn" title="Profile &amp; saved card">⚙</button>
+  </header>
+
+  <!-- Step 1 of the agreed flow: page context (URL + intent) -->
+  <section id="contextBar" class="context-bar hidden">
+    <div class="context-info">
+      <span class="context-label">Current page</span>
+      <span id="contextTitle" class="context-title"></span>
+    </div>
+    <button id="shopPageBtn" class="btn btn-small">Shop this page</button>
+  </section>
+
+  <!-- The conversation: user/agent bubbles + per-turn Instant Buy cards -->
+  <main id="chat" class="chat"></main>
+
+  <div id="demoBadge" class="demo-badge hidden">
+    Showing demo catalog (UAT) — samsung.com / bestbuy.com pending provisioning on this App ID
+  </div>
+
+  <div id="chips" class="chips hidden">
+    <button class="ask-chip">Where can I buy this?</button>
+    <button class="ask-chip">What are its key features?</button>
+    <button class="ask-chip">Show me similar products</button>
+  </div>
+
+  <section class="searchbox composer">
+    <input id="searchInput" type="text" placeholder="Ask me anything about products…" autocomplete="off" />
+    <button id="searchBtn" class="btn btn-primary">Ask</button>
+  </section>
+
+  <!-- Steps 5–7: drop-in — configure, card capture, order -->
+  <div id="sheetOverlay" class="sheet-overlay hidden">
+    <div id="sheet" class="sheet" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <!-- Profile: stands in for the browser profile / card-on-file pre-fill -->
+  <div id="profileOverlay" class="sheet-overlay hidden">
+    <div class="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-head">
+        <h2>Profile</h2>
+        <button class="icon-btn" id="profileClose">✕</button>
+      </div>
+      <p class="fine">Stands in for the Samsung Browser profile &amp; card-on-file. Card CVV is never stored — it is captured at purchase time on the checkout screen.</p>
+      <form id="profileForm" class="form-grid">
+        <input name="first_name" placeholder="First name" />
+        <input name="last_name" placeholder="Last name" />
+        <input name="email" placeholder="Email" type="email" class="span2" />
+        <input name="phone" placeholder="Phone" class="span2" />
+        <input name="address1" placeholder="Address" class="span2" />
+        <input name="city" placeholder="City" />
+        <input name="state_or_province" placeholder="State (e.g. CA)" />
+        <input name="postal_code" placeholder="ZIP" />
+        <input name="country" placeholder="Country" value="US" />
+        <div class="span2 subhead">Saved card (no CVV)</div>
+        <input name="card_number" placeholder="Card number" inputmode="numeric" class="span2" />
+        <input name="card_name" placeholder="Name on card" class="span2" />
+        <input name="card_month" placeholder="MM" inputmode="numeric" maxlength="2" />
+        <input name="card_year" placeholder="YYYY" inputmode="numeric" maxlength="4" />
+        <div class="span2 subhead">Setup</div>
+        <input name="app_id_override" placeholder="Firmly App ID (provided by Firmly)" class="span2" autocomplete="off" />
+        <p class="fine span2" id="activeAppId"></p>
+        <input name="llm_key_override" placeholder="LLM API key (optional, OpenAI-compatible)" class="span2" autocomplete="off" />
+        <p class="fine span2" id="activeLlm"></p>
+        <button type="submit" class="btn btn-primary span2">Save profile</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

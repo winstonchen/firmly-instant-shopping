@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Samsung Instant Shopping",
+  "version": "0.4.1",
+  "description": "Samsung Browser Instant Shopping POC \u2014 ask about products on any page and buy right there. Powered by Firmly.",
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_title": "Samsung Instant Shopping"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://api.firmly.work/*",
+    "https://cc.firmly.work/*",
+    "https://api.openai.com/*",
+    "https://api.perplexity.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.samsung.com/*",
+        "https://*.bestbuy.com/*",
+        "https://*.luma.gift/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/samsung-16.png",
+    "48": "icons/samsung-48.png",
+    "128": "icons/samsung-128.png"
+  }
+}
