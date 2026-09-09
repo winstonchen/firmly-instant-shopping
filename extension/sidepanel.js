@@ -6,6 +6,7 @@
 
 import { FIRMLY_CONFIG } from './config.js';
 import { FirmlyClient } from './lib/firmly-client.js';
+import { createConfigurator } from './lib/configurator.js';
 import { encryptCardJWE } from './lib/jwe.js';
 import { parseAsk } from './lib/keywords.js';
 import { agentRespond } from './lib/llm.js';
@@ -321,7 +322,7 @@ function renderResults(products, container) {
 const dropin = {
   product: null,   // full PDP payload
   domain: null,
-  selections: {},  // property_accessor → option value
+  cfg: null,       // configurator engine (lib/configurator.js)
   quantity: 1,
   cart: null,      // cart state after add / shipping
   shipCart: null   // response of shipping-info (has options + totals)
@@ -347,7 +348,7 @@ async function openDropIn(searchProduct) {
     dropin.product = await loadPdp(domain, searchProduct);
     dropin.domain = domain;
     dropin.quantity = 1;
-    dropin.selections = defaultSelections(dropin.product);
+    dropin.cfg = createConfigurator(dropin.product, searchProduct);
     renderConfigure();
   } catch (err) {
     sheetEl.innerHTML = `<p class="status-line">Could not load product: ${escapeHtml(err.message)}</p>`;
@@ -375,43 +376,14 @@ async function loadPdp(domain, searchProduct) {
   throw new Error('product details unavailable');
 }
 
-function optionGroups(product) {
-  return (product.variant_option_values || []).filter(
-    (g) => g && g.option_values && g.option_values.length
-  );
-}
-
-function defaultSelections(product) {
-  // Preselect the first available variant's options.
-  const groups = optionGroups(product);
-  const firstAvailable = (product.variants || []).find((v) => v.available) || (product.variants || [])[0];
-  const sel = {};
-  for (const g of groups) {
-    sel[g.property_accessor] = firstAvailable ? firstAvailable[g.property_accessor] : g.option_values[0].value;
-  }
-  return sel;
-}
-
-function selectedVariant() {
-  const groups = optionGroups(dropin.product);
-  const variants = dropin.product.variants || [];
-  if (!groups.length) return variants[0] || null;
-  return (
-    variants.find((v) => groups.every((g) => v[g.property_accessor] === dropin.selections[g.property_accessor])) ||
-    null
-  );
-}
-
-// -- state ①: configure (variant + qty) --
+// -- state ①: configure (the variant configurator + qty) --
 
 function renderConfigure() {
-  const p = dropin.product;
-  const v = selectedVariant();
-  const groups = optionGroups(p);
-  const img =
-    (v && v.images && v.images[0] && v.images[0].url) ||
-    (p.images && p.images[0] && p.images[0].url) ||
-    '';
+  const cfg = dropin.cfg;
+  const v = cfg.variant;
+  const img = cfg.image;
+  const msrp = cfg.msrp;
+  const savings = msrp && v ? { symbol: msrp.symbol, value: Number(msrp.value) - Number(v.price.value) } : null;
 
   sheetEl.innerHTML = `
     <div class="sheet-head">
@@ -419,12 +391,16 @@ function renderConfigure() {
       <button class="icon-btn" id="sheetClose">✕</button>
     </div>
     <div class="pdp">
-      ${img ? `<img src="${escapeAttr(img)}" alt="" />` : ''}
+      ${img ? `<img id="pdpImage" src="${escapeAttr(img)}" alt="" />` : ''}
       <div class="pdp-info">
-        <p class="pdp-title">${escapeHtml(p.title || '')}</p>
+        <p class="pdp-title">${escapeHtml(cfg.displayName)}</p>
         <div class="pdp-merchant">${escapeHtml(dropin.domain)}</div>
-        <div class="pdp-price">${v ? fmtMoney(v.price) : ''}</div>
-        ${v && !v.available ? '<div class="unavailable">Out of stock</div>' : ''}
+        <div class="pdp-price">
+          ${v ? fmtMoney(v.price) : ''}
+          ${msrp ? `<span class="pdp-msrp">${fmtMoney(msrp)}</span><span class="pdp-save">Save ${fmtMoney(savings)}</span>` : ''}
+        </div>
+        ${v && !v.available ? '<div class="unavailable">Out of stock — pick another option</div>' : ''}
+        ${!v ? '<div class="unavailable">This product is not purchasable right now</div>' : ''}
       </div>
     </div>
     <div id="optGroups"></div>
@@ -439,17 +415,24 @@ function renderConfigure() {
   `;
 
   const optWrap = sheetEl.querySelector('#optGroups');
-  for (const g of groups) {
+  for (const g of cfg.groups) {
+    const selectedLabel =
+      (g.option_values.find((ov) => ov.value === cfg.selection[g.property_accessor]) || {}).display_name || '';
     const div = document.createElement('div');
     div.className = 'opt-group';
-    div.innerHTML = `<span class="opt-label">${escapeHtml(g.display_name || 'Option')}</span><div class="opt-values"></div>`;
+    div.innerHTML = `<span class="opt-label">${escapeHtml(g.display_name || 'Option')}<span class="opt-selected">${escapeHtml(selectedLabel)}</span></span><div class="opt-values"></div>`;
     const values = div.querySelector('.opt-values');
     for (const ov of g.option_values) {
+      const stateName = cfg.valueState(g.property_accessor, ov.value);
+      if (stateName === 'missing') continue; // dead option — no variant carries it
       const chip = document.createElement('button');
-      chip.className = 'opt-chip' + (dropin.selections[g.property_accessor] === ov.value ? ' selected' : '');
+      chip.className = `opt-chip ${stateName}`;
+      chip.dataset.state = stateName;
       chip.textContent = ov.display_name;
+      if (stateName === 'unavailable') chip.title = 'Out of stock in this combination';
+      if (stateName === 'repair') chip.title = 'Available in a different combination — selecting adjusts the other options';
       chip.addEventListener('click', () => {
-        dropin.selections[g.property_accessor] = ov.value;
+        cfg.select(g.property_accessor, ov.value);
         renderConfigure();
       });
       values.appendChild(chip);
@@ -472,12 +455,12 @@ function renderConfigure() {
 // -- state ②: single-page checkout (address + shipping + card on one screen) --
 
 async function startCheckout() {
-  const v = selectedVariant();
-  if (!v) return;
+  const ref = dropin.cfg && dropin.cfg.addToCartRef;
+  if (!ref) return;
   sheetEl.innerHTML = '<div class="spinner"></div><p class="status-line">Adding to cart…</p>';
   try {
     await client.clearCart(dropin.domain).catch(() => {}); // instant-buy semantics: one item per order
-    dropin.cart = await client.addLineItem(dropin.domain, v.add_to_cart_ref, dropin.quantity);
+    dropin.cart = await client.addLineItem(dropin.domain, ref, dropin.quantity);
     const profile = await loadProfile();
     if (profileHasAddress(profile)) {
       sheetEl.innerHTML = '<div class="spinner"></div><p class="status-line">Calculating shipping &amp; tax…</p>';

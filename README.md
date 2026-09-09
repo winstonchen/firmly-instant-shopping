@@ -12,7 +12,7 @@ Built as a reference for browser-vendor integration. It is intentionally a **sim
 | 2 | **Shopping agent**: LLM answers the ask and decides when product search is relevant (tool-calling; browser's own LLM in production) | `extension/lib/llm.js` `agentRespond()` — **bring your own key**; heuristic fallback in `lib/keywords.js` |
 | 3 | Agent invokes Firmly product search whenever a shopping opportunity exists | `POST /api/v1/discovery/search` |
 | 4 | Answer + Instant Buy cards rendered (browser's own UI in production) | side-panel agent line + product grid |
-| 5 | Buy → drop-in: configure variant + add to cart | drop-in sheet, Cart API |
+| 5 | Buy → drop-in: **variant configurator** (color / size / model chips with stock states, sparse-matrix auto-repair, live price/MSRP/image per variant) + add to cart | `extension/lib/configurator.js` + drop-in sheet, Cart API |
 | 6 | Card captured on the same screen, encrypted on-device | `extension/lib/jwe.js` (RFC 7516 JWE via WebCrypto) |
 | 7 | Order placed, pre-filled from profile | `complete-order` on the PCI-scoped host |
 
@@ -28,11 +28,18 @@ extension/            The MV3 extension (load unpacked)
   content.js          Page-context capture (product name / title) on merchant sites
   sidepanel.*         The panel UI: ask box → cards → drop-in checkout
   lib/firmly-client.js  Pure API client (no extension APIs — also runs in Node)
+  lib/configurator.js Variant configurator engine (chip states, sparse-matrix repair)
   lib/jwe.js          Card encryption: JWE RSA-OAEP-256 + A256GCM, WebCrypto only
   lib/keywords.js     Intent/keyword heuristics — the LLM swap-in point
 web-demo/             The same panel as a plain static web page (zero-install demo)
+tests/                Unit tests for every lib/ module (node --test, no deps, no network)
 docs/DESIGN.md        Architecture, API sequences, security model, integration contract
 ```
+
+Run the tests with `cd tests && npm test` — 63 checks over the API client,
+card encryption, keyword heuristics, the agent loop, and the configurator
+(the latter against real captured bestbuy.com / samsung.com TV catalog
+payloads in `tests/fixtures/`). See [tests/README.md](tests/README.md).
 
 ## Setup
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Samsung Instant Shopping",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Samsung Browser Instant Shopping POC \u2014 ask about products on any page and buy right there. Powered by Firmly.",
   "minimum_chrome_version": "116",
   "action": {
