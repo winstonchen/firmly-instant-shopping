@@ -63,7 +63,8 @@ PDP:  GET /api/v1/domains-products/{domain}/{handle}
   │ fallback → GET /api/v1/domains-pdp?url={pdp_url}
   │ fallback → use the discovery hit itself (already carries variants)
   ▼
-configure: variant_option_values ↔ variants[].option1..3 → selected add_to_cart_ref
+configure: lib/configurator.js — variant_option_values ↔ variants[].option1..3
+           → chip states, auto-repair, selected add_to_cart_ref (see 3a)
   │ Buy now
   ▼
 DELETE /api/v1/domains/{d}/cart/line-items        (instant-buy = single-item order)
@@ -78,6 +79,46 @@ POST https://cc.firmly.work/api/v1/payment/domains/{d}/complete-order
   ▼
 confirmation: cart_status=submitted, platform_line_item_id, urls.thank_you_page
 ```
+
+### 3a. The variant configurator (`lib/configurator.js`)
+
+The configure step of the sheet is driven by a pure, DOM-free engine
+(`extension/lib/configurator.js`, shared verbatim by the web demo, unit-tested
+in `tests/`). It exists because real catalogs are not clean grids:
+
+- **Sparse option matrices.** samsung.com TVs expose Model × Size groups where
+  many combinations have no variant at all (Neo QLED QN90F: 4 models × 9 sizes
+  = 36 combos, 21 real variants). A naive exact-match lookup strands the user
+  on a combination that cannot be bought.
+- **Unsorted measurements.** Option values arrive lexicographically sorted
+  (100", 115", 43", 50" …).
+- **Mixed stock.** bestbuy.com's single "Screen Size Class" group mixes
+  out-of-stock sizes in with purchasable ones.
+- **Broken image entries.** Some variants carry image objects whose url is the
+  literal string "undefined".
+
+The engine guarantees:
+
+1. **The selection always resolves to a real variant.** Picking a value whose
+   exact combination doesn't exist auto-repairs the other groups to the best
+   variant carrying that value (in-stock preferred, then the fewest changes to
+   the current selection). The default selection is the first available
+   variant.
+2. **Every option value renders with an honest state** — `selected`,
+   `available` (in stock with the other selected options), `unavailable`
+   (combination exists, out of stock — struck through, Buy disabled),
+   `repair` (exists only with different other options — dashed; picking it
+   adjusts them), `missing` (no variant anywhere — not rendered).
+3. **Presentation follows the variant**: price, MSRP strike-through + savings
+   badge (only when MSRP beats price), per-variant image (broken urls
+   filtered), display name, and the `add_to_cart_ref` handed to the Cart API.
+4. **Groups render by `position`; measurement-valued groups sort numerically**;
+   variants missing `option1..3` accessors fall back to
+   `variant_option_list` by position.
+
+Validated end-to-end against six live products: Samsung U8000H, Samsung S90H
+OLED, and LG NU700B on bestbuy.com; The Frame LS03FA, Neo QLED QN90F, and
+QLED Q7F on samsung.com.
 
 Field notes that matter (all per the public docs):
 - Shipping field is `state_or_province` (not `state`).

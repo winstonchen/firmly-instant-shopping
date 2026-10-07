@@ -1,0 +1,710 @@
+{
+  "base_sku": "QN43LS03FAFXZA",
+  "title": "43\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+  "brand": null,
+  "handle": "/us/lifestyle-tvs/the-frame/43-inch-the-frame-qled-4k-tv-ls03fa-sku-qn43ls03fafxza",
+  "description": "",
+  "pdp_url": "https://www.samsung.com/us/lifestyle-tvs/the-frame/43-inch-the-frame-qled-4k-tv-ls03fa-sku-qn43ls03fafxza",
+  "domain": "samsung.com",
+  "domain_name": "Samsung",
+  "price_range": {
+    "min": 69999,
+    "max": 329999
+  },
+  "has_available_variants": true,
+  "images": [
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-546242561?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-549293608?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---side-thin-profile-view-545650139?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-one-connect-box---connections-545650141?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-549717907?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---modern-frame-design-545650137?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-art-mode-technology-545650143?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-artful-picture-quality-545650145?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-vision-ai-enhanced-picture-545650147?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---lifestyle-545650135?$product-details-jpg$"
+    },
+    {
+      "type": "default",
+      "url": "undefined"
+    },
+    {
+      "type": "default",
+      "url": "undefined"
+    }
+  ],
+  "variants": [
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-546242561?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-549293608?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---side-thin-profile-view-545650139?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-one-connect-box---connections-545650141?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-ls03f-qn43ls03fafxza-549717907?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---modern-frame-design-545650137?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-art-mode-technology-545650143?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-artful-picture-quality-545650145?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-vision-ai-enhanced-picture-545650147?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn43ls03fafxza/gallery/us-the-frame-qn43ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---lifestyle-545650135?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN43LS03FAFXZA",
+      "display_name": "43\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "43\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame",
+        "43\""
+      ],
+      "price": {
+        "number": 69999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 699.99
+      },
+      "msrp": {
+        "number": 89999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 899.99
+      },
+      "option1": "The Frame",
+      "option2": "43\"",
+      "sku": "QN43LS03FAFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN43LS03FAFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-ls03f-qn50ls03fafxza-546242569?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-ls03f-qn50ls03fafxza-549293627?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---side-thin-profile-view-545650163?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-one-connect-box---connections-545650165?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-ls03f-qn50ls03fafxza-549718082?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---modern-frame-design-545650161?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-art-mode-technology-545650167?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-artful-picture-quality-545650169?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-vision-ai-enhanced-picture-545650171?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn50ls03fafxza/gallery/us-the-frame-qn50ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---lifestyle-545650159?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN50LS03FAFXZA",
+      "display_name": "50\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "50\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame",
+        "50\""
+      ],
+      "price": {
+        "number": 79999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 799.99
+      },
+      "msrp": {
+        "number": 109999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1099.99
+      },
+      "option1": "The Frame",
+      "option2": "50\"",
+      "sku": "QN50LS03FAFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN50LS03FAFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-ls03f-qn55ls03fafxza-546242579?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-ls03f-qn55ls03fafxza-549293635?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---side-thin-profile-view-545650195?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-one-connect-box---connections-545650197?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-ls03f-qn55ls03fafxza-549718099?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---modern-frame-design-545650193?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-art-mode-technology-545650199?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-artful-picture-quality-545650201?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa-with-vision-ai-enhanced-picture-545650203?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn55ls03fafxza/gallery/us-the-frame-qn55ls03fafxza-samsung-the-frame-neo-qled--k-tv-ls--fa---lifestyle-545650191?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN55LS03FAFXZA",
+      "display_name": "55\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "55\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame",
+        "55\""
+      ],
+      "price": {
+        "number": 89999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 899.99
+      },
+      "msrp": {
+        "number": 129999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1299.99
+      },
+      "option1": "The Frame",
+      "option2": "55\"",
+      "sku": "QN55LS03FAFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN55LS03FAFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-546242585?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-549293643?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545615483?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650049?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-549718107?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650062?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650067?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650072?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650079?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fafxza/gallery/us-the-frame-ls03f-qn65ls03fafxza-545650084?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN65LS03FAFXZA",
+      "display_name": "65\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "65\" Class The Frame LS03FA QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame",
+        "65\""
+      ],
+      "price": {
+        "number": 119999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1199.99
+      },
+      "msrp": {
+        "number": 179999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1799.99
+      },
+      "option1": "The Frame",
+      "option2": "65\"",
+      "sku": "QN65LS03FAFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN65LS03FAFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546242603?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-549293673?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-qn65ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw---side-thin-profile-view-546010389?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105922?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-549728838?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105438?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105567?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105605?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105736?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65ls03fwfxza/gallery/us-the-frame-ls03fw-qn65ls03fwfxza-546105802?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN65LS03FWFXZA",
+      "display_name": "65\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "65\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame Pro",
+        "65\""
+      ],
+      "price": {
+        "number": 159999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1599.99
+      },
+      "msrp": {
+        "number": 219999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 2199.99
+      },
+      "option1": "The Frame Pro",
+      "option2": "65\"",
+      "sku": "QN65LS03FWFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN65LS03FWFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-ls03fw-qn75ls03fwfxza-546242610?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-ls03fw-qn75ls03fwfxza-549293681?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw---side-thin-profile-view-546106256?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-one-connect-box---connections-546106258?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-ls03fw-qn75ls03fwfxza-549728882?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-modern-frame-design---wireless-one-connect-546106264?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-art-mode-technology-546106260?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-artful-picture-quality-546106262?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-vision-ai-enhanced-picture-546106266?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn75ls03fwfxza/gallery/us-the-frame-qn75ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw---lifestyle-546106254?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN75LS03FWFXZA",
+      "display_name": "75\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "75\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame Pro",
+        "75\""
+      ],
+      "price": {
+        "number": 199999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 1999.99
+      },
+      "msrp": {
+        "number": 319999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 3199.99
+      },
+      "option1": "The Frame Pro",
+      "option2": "75\"",
+      "sku": "QN75LS03FWFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN75LS03FWFXZA"
+      }
+    },
+    {
+      "images": [
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-ls03fw-qn85ls03fwfxza-546242619?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-ls03fw-qn85ls03fwfxza-549293699?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw---side-thin-profile-view-546106316?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-one-connect-box---connections-546106318?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-ls03fw-qn85ls03fwfxza-549728926?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-modern-frame-design---wireless-one-connect-546106324?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-art-mode-technology-546106320?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-artful-picture-quality-546106322?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw-with-vision-ai-enhanced-picture-546106326?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "https://images.samsung.com/is/image/samsung/p6pim/us/qn85ls03fwfxza/gallery/us-the-frame-qn85ls03fwfxza-samsung-the-frame-neo-qled--k-tv-ls--fw---lifestyle-546106314?$product-details-jpg$"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        },
+        {
+          "type": "default",
+          "url": "undefined"
+        }
+      ],
+      "available": true,
+      "weight": 0,
+      "handle": "QN85LS03FWFXZA",
+      "display_name": "85\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "title": "85\" Class The Frame Pro LS03FW Neo QLED 4K Art Mode Samsung Vision AI Smart TV (2025)",
+      "variant_option_list": [
+        "The Frame Pro",
+        "85\""
+      ],
+      "price": {
+        "number": 329999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 3299.99
+      },
+      "msrp": {
+        "number": 429999,
+        "symbol": "$",
+        "currency": "USD",
+        "value": 4299.99
+      },
+      "option1": "The Frame Pro",
+      "option2": "85\"",
+      "sku": "QN85LS03FWFXZA",
+      "add_to_cart_ref": {
+        "variant_id": "QN85LS03FWFXZA"
+      }
+    }
+  ],
+  "variant_option_values": [
+    {
+      "option_values": [
+        {
+          "display_name": "The Frame",
+          "value": "The Frame"
+        },
+        {
+          "display_name": "The Frame Pro",
+          "value": "The Frame Pro"
+        }
+      ],
+      "property_accessor": "option1",
+      "position": 0,
+      "display_name": "Model"
+    },
+    {
+      "option_values": [
+        {
+          "display_name": "43\"",
+          "value": "43\""
+        },
+        {
+          "display_name": "50\"",
+          "value": "50\""
+        },
+        {
+          "display_name": "55\"",
+          "value": "55\""
+        },
+        {
+          "display_name": "65\"",
+          "value": "65\""
+        },
+        {
+          "display_name": "75\"",
+          "value": "75\""
+        },
+        {
+          "display_name": "85\"",
+          "value": "85\""
+        }
+      ],
+      "property_accessor": "option2",
+      "position": 1,
+      "display_name": "Size"
+    }
+  ],
+  "tags": [
+    "4k tv",
+    "qled tv",
+    "smart tv",
+    "art mode tv",
+    "living room tv",
+    "home entertainment",
+    "large screen tv",
+    "ai tv",
+    "vision ai",
+    "samsung tv",
+    "frame tv",
+    "2025 tv",
+    "samsung frame tv",
+    "43 inch television",
+    "qled 4k smart tv",
+    "digital art display",
+    "wall decor tv",
+    "slim wall mount tv",
+    "anti-glare screen",
+    "interior design tv",
+    "ai powered television",
+    "matte display tv",
+    "home theater display",
+    "minimalist electronics",
+    "picture frame tv",
+    "smart home entertainment",
+    "high definition tv",
+    "living room decor",
+    "modern television"
+  ],
+  "average_rating": null,
+  "total_reviews": null,
+  "category": {
+    "l1": "Electronics",
+    "l2": "Video",
+    "l3": "Televisions",
+    "l4": null,
+    "l5": null,
+    "l6": null,
+    "l7": null
+  }
+}

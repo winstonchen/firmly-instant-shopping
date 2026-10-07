@@ -12,6 +12,7 @@ Practical answers for working with this codebase: where things live, what to cha
 | `extension/config.js` | **All configuration**: App ID, API hosts, target merchants, LLM endpoint/model/key | Most integration changes start here |
 | `extension/sidepanel.html/.css/.js` | The entire UI: chat thread, product carousel, drop-in checkout sheet, ⚙ settings | Replace with your native UI |
 | `extension/lib/firmly-client.js` | Pure Firmly API client (~200 lines, plain `fetch`, no browser APIs) | Shouldn't need changes — reuse as-is |
+| `extension/lib/configurator.js` | Variant configurator engine: chip states, sparse-matrix auto-repair, per-variant price/MSRP/image (unit-tested in `tests/`) | Reuse as-is; drive your own UI from its `groups` / `valueState` / `select` |
 | `extension/lib/jwe.js` | Card encryption (RFC 7516 JWE via WebCrypto) | Do not change (see §7) |
 | `extension/lib/llm.js` | The shopping-agent loop (LLM + `search_products` tool) and prompts | Point at your LLM (§3) |
 | `extension/lib/keywords.js` | Deterministic fallback when no LLM key is configured | Rarely |
@@ -100,9 +101,9 @@ To use your card-on-file: source `number/name/month/year` from your store instea
 
 The code is deliberately layered for that:
 
-- **`lib/firmly-client.js` and `lib/jwe.js` have zero browser-extension dependencies** — plain `fetch` + WebCrypto. They run unchanged in any web/renderer context (they also run in Node).
+- **`lib/firmly-client.js`, `lib/configurator.js`, and `lib/jwe.js` have zero browser-extension dependencies** — plain `fetch` + WebCrypto + pure logic. They run unchanged in any web/renderer context (they also run in Node — the unit tests in `tests/` do exactly that).
 - **`web-demo/` is the existence proof**: the identical panel as a plain web page, with `localStorage` standing in for extension storage and no page-context capture. Diff `web-demo/app.js` against `extension/sidepanel.js` to see exactly which lines are extension-specific — it's only storage, tabs, and the context capture.
-- So the native integration is: keep the two lib modules + the API sequences from [DESIGN.md](DESIGN.md) §3, and rebuild the presentation in your own UI stack. The drop-in sheet's states (configure → checkout → confirmation) map 1:1 to the API calls.
+- So the native integration is: keep the lib modules + the API sequences from [DESIGN.md](DESIGN.md) §3, and rebuild the presentation in your own UI stack. The drop-in sheet's states (configure → checkout → confirmation) map 1:1 to the API calls, and the configure state maps 1:1 to `lib/configurator.js` (`groups` → option rows, `valueState` → chip styling, `select` → tap handler).
 - CORS: Firmly's API serves permissive CORS, so calls work from any origin — no proxy needed even from a plain webview.
 
 ## 9. Where do I change the target merchants?

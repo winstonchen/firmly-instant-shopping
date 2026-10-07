@@ -1,0 +1,8 @@
+{
+  "name": "firmly-instant-shopping-tests",
+  "private": true,
+  "description": "Unit tests for the extension's lib/ modules — Node built-in runner, no dependencies, no network.",
+  "scripts": {
+    "test": "node --test 'unit/*.test.mjs'"
+  }
+}

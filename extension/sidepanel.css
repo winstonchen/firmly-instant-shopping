@@ -466,6 +466,36 @@ body {
   color: #fff;
   box-shadow: 0 3px 10px rgba(20, 40, 160, 0.3);
 }
+/* Configurator chip states (lib/configurator.js valueState) */
+.opt-chip.unavailable {
+  color: var(--muted, #8a8f98);
+  border-style: solid;
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+.opt-chip.repair { border-style: dashed; }
+.opt-label .opt-selected {
+  font-weight: 600;
+  color: var(--muted, #8a8f98);
+  margin-left: 6px;
+}
+.pdp .pdp-msrp {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted, #8a8f98);
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+.pdp .pdp-save {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #0a7d3b;
+  background: rgba(10, 125, 59, 0.1);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
 
 .qty-row { display: flex; align-items: center; gap: 12px; margin: 12px 0 16px; }
 .qty-row button {
